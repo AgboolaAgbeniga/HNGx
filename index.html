@@ -19,7 +19,7 @@
 
             <!-- Slack Display Picture -->
             <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1568909575/agboola_emn5gb.png"
-                alt="Your Slack Username" data-testid="slackDisplayImage">
+                alt="Agboola Agbeniga" data-testid="slackDisplayImage">
 
             <!-- Current Day of the Week -->
             <p data-testid="currentDayOfTheWeek">
@@ -32,16 +32,16 @@
                 </script>
             </p>
 
-            <!-- Current UTC Time -->
+            <!-- Current UTC Time in Milliseconds -->
             <p data-testid="currentUTCTime">
-                <!-- JavaScript code to display the current UTC time -->
+                <!-- JavaScript code to display the current UTC time in milliseconds -->
                 <script>
                     const now = new Date();
-                    const utcOffset = 1; // GMT+1
-                    const utcTime = new Date(now.getTime() + (utcOffset * 60 * 60 * 1000)).toUTCString();
-                    document.write(utcTime);
+                    const utcMilliseconds = now.getTime();
+                    document.write(utcMilliseconds);
                 </script>
             </p>
+
 
             <!-- Track -->
             <p data-testid="myTrack" class="track">Frontend</p>
