@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Info</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the Slack Name and Display Picture */
+        #slackUserName {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #slackDisplayImage {
+            margin-top: 10px;
+            border-radius: 50%;
+            max-width: 200px;
+        }
+
+        /* Style other information */
+        #currentDayOfTheWeek, #currentUTCTime, #myTrack {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Style the GitHub link */
+        #githubURL {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Slack Name -->
+        <p data-testid="slackUserName">Agboola Agbeniga</p>
+        
+        <!-- Slack Display Picture -->
+        <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1568909575/agboola_emn5gb.png" alt="Your Slack Username" data-testid="slackDisplayImage">
+        
+        <!-- Current Day of the Week -->
+        <p data-testid="currentDayOfTheWeek">
+            <!-- JavaScript code to display the current day of the week -->
+            <script>
+                const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                const today = new Date();
+                const dayOfWeek = daysOfWeek[today.getDay()];
+                document.write(dayOfWeek);
+            </script>
+        </p>
+        
+        <!-- Current UTC Time -->
+        <p data-testid="currentUTCTime">
+            <!-- JavaScript code to display the current UTC time -->
+            <script>
+                const now = new Date();
+                const utcTime = now.toUTCString();
+                document.write(utcTime);
+            </script>
+        </p>
+        
+        <!-- Track -->
+        <p data-testid="myTrack">Frontend</p>
+        
+        <!-- GitHub URL -->
+        <p data-testid="githubURL">
+            <a href="https://github.com/yourusername/your-repository" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        </p>
+    </div>
+</body>
+</html>
