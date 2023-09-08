@@ -1,58 +1,68 @@
 <!DOCgit gTYPE html>
-<html lang="en">
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agboola Slack Profile</title>
-    <link rel="stylesheet" href="index.css">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agboola Slack Profile</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
 
-    </style>
-</head>
+        </style>
+    </head>
 
-<body>
-    <div id="container">
-        <div class="card">
-            <!-- Slack Name -->
-            <h2 data-testid="slackUserName">Agboola Agbeniga</h2>
+    <body>
+        <div id="container">
+            <div class="card">
+                <!-- Slack Name -->
+                <h2 data-testid="slackUserName">Agboola Agbeniga</h2>
 
-            <!-- Slack Display Picture -->
-            <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1568909575/agboola_emn5gb.png"
-                alt="Agboola Agbeniga" data-testid="slackDisplayImage">
+                <!-- Slack Display Picture -->
+                <img src="https://res.cloudinary.com/wpgroom-com/image/upload/v1568909575/agboola_emn5gb.png"
+                    alt="Agboola Agbeniga" data-testid="slackDisplayImage">
 
-            <!-- Current Day of the Week -->
-            <p data-testid="currentDayOfTheWeek">
-                <!-- JavaScript code to display the current day of the week -->
-                <script>
-                    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                    const today = new Date();
-                    const dayOfWeek = daysOfWeek[today.getDay()];
-                    document.write(dayOfWeek);
-                </script>
-            </p>
+                <!-- Current Day of the Week -->
+                <p data-testid="currentDayOfTheWeek">
+                    <!-- JavaScript code to display the current day of the week -->
+                    <script>
+                        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                            "Saturday"];
+                        const today = new Date();
+                        const dayOfWeek = daysOfWeek[today.getDay()];
+                        document.write(dayOfWeek);
+                    </script>
+                </p>
 
-            <!-- Current UTC Time in Milliseconds -->
-            <p data-testid="currentUTCTime">
-                <!-- JavaScript code to display the current UTC time in milliseconds -->
-                <script>
-                    const now = new Date();
-                    const utcMilliseconds = now.getTime();
-                    document.write(utcMilliseconds);
-                </script>
-            </p>
+                <!-- Current UTC Time in Milliseconds -->
+                <p data-testid="currentUTCTime" id="uctTime">
+                    <!-- JavaScript code to display and continuously update the current UTC time in milliseconds -->
+                    <script>
+                        function updateUTCTime() {
+                            const now = new Date();
+                            const utcMilliseconds = now.getTime();
+                            document.getElementById('uctTime').textContent = utcMilliseconds;
+                        }
+
+                        // Update the time every second (1000 milliseconds)
+                        setInterval(updateUTCTime, 100);
+
+                        // Initial call to update time
+                        updateUTCTime();
+                    </script>
+                </p>
 
 
-            <!-- Track -->
-            <p data-testid="myTrack" class="track">Frontend</p>
 
-            <!-- GitHub URL -->
-            <p data-testid="githubURL">
-                <a href="https://github.com/AgboolaAgbeniga/HNGx_Slack_profile_task.git" target="_blank"
-                    rel="noopener noreferrer">GitHub Repository</a>
-            </p>
+                <!-- Track -->
+                <p data-testid="myTrack" class="track">Frontend</p>
+
+                <!-- GitHub URL -->
+                <p data-testid="githubURL">
+                    <a href="https://github.com/AgboolaAgbeniga/HNGx_Slack_profile_task.git" target="_blank"
+                        rel="noopener noreferrer">GitHub Repository</a>
+                </p>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 
-</html>
+    </html>
